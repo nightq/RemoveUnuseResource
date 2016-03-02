@@ -83,6 +83,9 @@ public class RemoveUnuseResource {
     }
 
     public static void main(String[] args){
+        if (args != null && args.length > 0) {
+            projectPath = args[0];
+        }
         for (String resPath :
                 resPaths) {
             processFile(resPath);
