@@ -44,7 +44,8 @@ public class RemoveUnuseResource {
     private static String deletePath;
     private static Document xmldoc;
     private static Element root;
-    static String projectPath = "./PeekabooAndroid/";
+    private static String  androidLintUnusedResources = "./RemoveUnuseResource/AndroidLintUnusedResources.xml";
+    static String projectPath = "./PeekabooAndroid";
 
 
     /**
@@ -86,11 +87,16 @@ public class RemoveUnuseResource {
         if (args != null && args.length > 0) {
             projectPath = args[0];
         }
+
+        if (args != null && args.length > 1) {
+            androidLintUnusedResources = args[1];
+        }
+
         for (String resPath :
                 resPaths) {
             processFile(resPath);
         }
-        File detectFolderFile = new File(projectPath + detectFolderBehind);
+        File detectFolderFile = new File(projectPath + "/" + detectFolderBehind);
         File[] detectFolders = null;
         File[] detectFiles = null;
         if (detectFolderFile.exists() && (detectFolders = detectFolderFile.listFiles()) != null) {
@@ -142,8 +148,7 @@ public class RemoveUnuseResource {
 
     public static void removeStringItem() {
 
-        String path = "./RemoveUnuseResource/lint-results.xml";
-        path = "./RemoveUnuseResource/AndroidLintUnusedResources.xml";
+        String path = androidLintUnusedResources;
 
         File f = new File(path);
         File file = new File(path);
