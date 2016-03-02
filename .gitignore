@@ -1,0 +1,35 @@
+# Mac OS
+.DS_Store
+
+# built application files
+# *.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+build/
+.gradle/
+
+# Local configuration file (sdk path, etc)
+local.properties
+.settings/org.eclipse.ltk.core.refactoring.prefs
+
+# Intellij IDEA
+.idea
+*.iml
+AndroidLintUnusedResources.xml
+RemoveString.class
+# signing configuration file
+signing.gradle
+app/signing.gradle
+
+res/values/com_crashlytics_export_strings.xml
+assets/crashlytics-build.properties
+res/values/integers.xml
