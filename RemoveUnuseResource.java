@@ -39,7 +39,7 @@ public class RemoveUnuseResource {
 //            "./PeekabooAndroid/app/src/main/res/values/colors.xml"
     };
 
-    private static String detectFolder = "./PeekabooAndroid/app/src/main/res";
+    private static String detectFolderBehind = "app/src/main/res";
     private static String folderFrontAdd = "values";
     private static String deletePath;
     private static Document xmldoc;
@@ -90,7 +90,7 @@ public class RemoveUnuseResource {
                 resPaths) {
             processFile(resPath);
         }
-        File detectFolderFile = new File(detectFolder);
+        File detectFolderFile = new File(projectPath + detectFolderBehind);
         File[] detectFolders = null;
         File[] detectFiles = null;
         if (detectFolderFile.exists() && (detectFolders = detectFolderFile.listFiles()) != null) {
@@ -142,8 +142,8 @@ public class RemoveUnuseResource {
 
     public static void removeStringItem() {
 
-        String path = "./nightq/lint-results.xml";
-        path = "./nightq/AndroidLintUnusedResources.xml";
+        String path = "./RemoveUnuseResource/lint-results.xml";
+        path = "./RemoveUnuseResource/AndroidLintUnusedResources.xml";
 
         File f = new File(path);
         File file = new File(path);
