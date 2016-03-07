@@ -241,6 +241,7 @@ public class RemoveUnuseResource {
             String fileRow = fileNodeValue;
             System.out.println("file = " + fileRow);
             if ((fileRow.contains("res/drawable")
+                    || fileRow.contains("res/mipmap")
                     || fileRow.contains("res/layout")
                     || fileRow.contains("res/anim")
                     || fileRow.contains("res/menu")
