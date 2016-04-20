@@ -92,6 +92,10 @@ public class RemoveUnuseResource {
             androidLintUnusedResources = args[1];
         }
 
+        if (args != null && args.length > 2) {
+            detectFolderBehind = args[2];
+        }
+
         for (String resPath :
                 resPaths) {
             processFile(resPath);
